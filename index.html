@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>triple7 · home</title>
-  <!-- Roboto Condensed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,117 +15,95 @@
     }
 
     body {
-      background: #0c0f14;
+      background: #0a0d13;
       font-family: 'Roboto Condensed', sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 24px;
-      color: #e0e0e0;
+      color: #ececec;
     }
 
-    .container {
-      max-width: 900px;
+    .card {
+      max-width: 800px;
       width: 100%;
-      background: #141a22;
-      border-radius: 24px;
-      padding: 40px 36px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      border: 1px solid #2a3645;
+      background: #12181f;
+      border: 1px solid #2a3848;
+      padding: 48px 40px;
     }
 
     h1 {
-      font-size: 4.2rem;
+      font-size: 4.5rem;
       font-weight: 700;
-      letter-spacing: 6px;
+      letter-spacing: 8px;
       text-transform: uppercase;
       color: #ffffff;
       margin-bottom: 8px;
     }
 
     .subhead {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 400;
-      color: #9aaec2;
-      margin-bottom: 28px;
-      border-bottom: 1px solid #2a3645;
-      padding-bottom: 20px;
+      color: #8b9eb5;
+      border-bottom: 1px solid #253544;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    .info-card {
-      background: #0f151e;
-      border-radius: 18px;
-      padding: 24px 28px;
-      margin: 28px 0 36px;
-      border: 1px solid #263340;
-    }
-
-    .info-card p {
-      font-size: 1.15rem;
+    .info {
+      font-size: 1.2rem;
       line-height: 1.5;
-      color: #cddcec;
-      margin-bottom: 10px;
+      margin-bottom: 48px;
+      color: #cbdae8;
     }
 
     .btn {
       display: inline-block;
-      background: #1f3a5f;
-      color: white;
+      background: transparent;
+      color: #ffffff;
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 600;
       font-size: 1.4rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 16px 44px;
-      border-radius: 50px;
+      letter-spacing: 3px;
+      padding: 16px 48px;
+      border: 2px solid #3a5f82;
       text-decoration: none;
-      border: 1px solid #3f6b9c;
-      box-shadow: 0 8px 0 #0b1219;
-      transition: all 0.08s ease;
+      transition: 0.1s;
     }
 
     .btn:hover {
-      background: #2b4f7a;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 0 #0b1219;
-    }
-
-    .btn:active {
-      transform: translateY(4px);
-      box-shadow: 0 4px 0 #0b1219;
+      background: #1d344b;
+      border-color: #5a8fc9;
     }
 
     .footer-note {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #6e8299;
-      text-align: center;
+      margin-top: 48px;
+      font-size: 0.8rem;
+      color: #5e748b;
     }
 
     @media (max-width: 500px) {
-      .container { padding: 28px 20px; }
+      .card { padding: 32px 24px; }
       h1 { font-size: 3rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="card">
     <h1>triple7</h1>
-    <div class="subhead">universal · delta · performance</div>
+    <div class="subhead">universal · delta · clean</div>
 
-    <div class="info-card">
-      <p><strong>UNIVERSAL SCRIPT</strong> — stable executor, wide compatibility.<br>
-      <strong>PROJECT DELTA</strong> — experimental, bleeding‑edge features.</p>
-      <p style="margin-top: 14px; opacity: 0.8;">Click below to access loadstrings and source code.</p>
+    <div class="info">
+      <strong>UNIVERSAL SCRIPT</strong> — stable, wide compatibility.<br>
+      <strong>PROJECT DELTA</strong> — experimental, edge features.
     </div>
 
-    <div style="text-align: center;">
-      <a href="hub.html" class="btn">GET STARTED</a>
-    </div>
+    <a href="hub.html" class="btn">GET STARTED</a>
 
     <div class="footer-note">
-      triple7 · script hub · placeholder links active on hub page
+      triple7 · script hub
     </div>
   </div>
 </body>
