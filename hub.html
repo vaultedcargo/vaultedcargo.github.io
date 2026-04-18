@@ -15,21 +15,21 @@
     }
 
     body {
-      background: #0a0d13;
+      background: #000000;
       font-family: 'Roboto Condensed', sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 24px;
-      color: #ececec;
+      color: #ffffff;
     }
 
     .hub-card {
       max-width: 880px;
       width: 100%;
-      background: #12181f;
-      border: 1px solid #2a3848;
+      background: #000000;
+      border: 1px solid #333333;
       padding: 40px 36px;
     }
 
@@ -45,24 +45,25 @@
       font-weight: 700;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: white;
+      color: #ffffff;
     }
 
     .back-link {
-      color: #8ba9cc;
+      color: #cccccc;
       text-decoration: none;
       font-weight: 500;
       font-size: 1.2rem;
-      border-bottom: 1px solid #3f5e7e;
+      border-bottom: 1px solid #555555;
     }
 
     .back-link:hover {
-      color: #bfd6ff;
+      color: #ffffff;
+      border-bottom-color: #ffffff;
     }
 
     .script-block {
       margin-bottom: 40px;
-      border-left: 4px solid #2e4b70;
+      border-left: 4px solid #444444;
       padding-left: 24px;
     }
 
@@ -72,12 +73,12 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 8px;
-      color: #e0ecff;
+      color: #ffffff;
     }
 
     .script-desc {
       font-size: 1.1rem;
-      color: #a3b8cf;
+      color: #bbbbbb;
       margin-bottom: 28px;
     }
 
@@ -95,7 +96,7 @@
       letter-spacing: 2px;
       padding: 12px 32px;
       background: transparent;
-      border: 2px solid #3a5f82;
+      border: 2px solid #ffffff;
       color: #ffffff;
       cursor: pointer;
       text-decoration: none;
@@ -104,15 +105,15 @@
     }
 
     .btn:hover {
-      background: #1d344b;
-      border-color: #5a8fc9;
+      background: #ffffff;
+      color: #000000;
     }
 
     .footer-meta {
       margin-top: 32px;
       text-align: right;
       font-size: 0.8rem;
-      color: #5e748b;
+      color: #777777;
     }
 
     @media (max-width: 600px) {
@@ -136,7 +137,7 @@
       </div>
       <div class="button-group">
         <a href="#" class="btn" id="universal-source">VIEW SOURCE</a>
-        <button class="btn" id="universal-loadstring">COPY LOADSTRING</button>
+        <a href="#" class="btn" id="universal-loadstring">OPEN LOADSTRING</a>
       </div>
     </div>
 
@@ -148,7 +149,7 @@
       </div>
       <div class="button-group">
         <a href="#" class="btn" id="delta-source">VIEW SOURCE</a>
-        <button class="btn" id="delta-loadstring">COPY LOADSTRING</button>
+        <a href="#" class="btn" id="delta-loadstring">OPEN LOADSTRING</a>
       </div>
     </div>
 
@@ -159,37 +160,30 @@
 
   <script>
     (function() {
-      // ---------- PLACEHOLDER LINKS ----------
-      // Replace these strings with your actual URLs/loadstrings.
-      const UNIVERSAL_SOURCE_URL = 'linksourceplaceholder1';
-      const UNIVERSAL_LOADSTRING = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/vaultedcargo/triple7/refs/heads/main/triple7universal.lua"))()';
-      const DELTA_SOURCE_URL = 'linksourceplaceholder2';
-      const DELTA_LOADSTRING = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/vaultedcargo/triple7/refs/heads/main/triple7pd.lua"))()';
+      // ---------- REPLACE THESE WITH YOUR ACTUAL LINKS ----------
+      const UNIVERSAL_SOURCE_LINK = 'linksourceplaceholder1';
+      const UNIVERSAL_LOADSTRING_LINK = 'linkloadstringplaceholder1';
+      const DELTA_SOURCE_LINK = 'linksourceplaceholder2';
+      const DELTA_LOADSTRING_LINK = 'linkloadstringplaceholder2';
 
       // Universal
       document.getElementById('universal-source').addEventListener('click', (e) => {
         e.preventDefault();
-        window.open(UNIVERSAL_SOURCE_URL, '_blank');
+        window.open(UNIVERSAL_SOURCE_LINK, '_blank');
       });
-      document.getElementById('universal-loadstring').addEventListener('click', () => {
-        navigator.clipboard?.writeText(UNIVERSAL_LOADSTRING).then(() => {
-          alert('Universal loadstring copied.');
-        }).catch(() => {
-          prompt('Copy manually:', UNIVERSAL_LOADSTRING);
-        });
+      document.getElementById('universal-loadstring').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(UNIVERSAL_LOADSTRING_LINK, '_blank');
       });
 
       // Delta
       document.getElementById('delta-source').addEventListener('click', (e) => {
         e.preventDefault();
-        window.open(DELTA_SOURCE_URL, '_blank');
+        window.open(DELTA_SOURCE_LINK, '_blank');
       });
-      document.getElementById('delta-loadstring').addEventListener('click', () => {
-        navigator.clipboard?.writeText(DELTA_LOADSTRING).then(() => {
-          alert('Delta loadstring copied.');
-        }).catch(() => {
-          prompt('Copy manually:', DELTA_LOADSTRING);
-        });
+      document.getElementById('delta-loadstring').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(DELTA_LOADSTRING_LINK, '_blank');
       });
     })();
   </script>
