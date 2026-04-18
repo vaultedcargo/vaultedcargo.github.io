@@ -15,32 +15,29 @@
     }
 
     body {
-      background: #0c0f14;
+      background: #0a0d13;
       font-family: 'Roboto Condensed', sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 24px;
-      color: #e0e0e0;
+      color: #ececec;
     }
 
-    .hub-container {
-      max-width: 1000px;
+    .hub-card {
+      max-width: 880px;
       width: 100%;
-      background: #141a22;
-      border-radius: 28px;
-      padding: 36px 34px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      border: 1px solid #2a3645;
+      background: #12181f;
+      border: 1px solid #2a3848;
+      padding: 40px 36px;
     }
 
     .header-row {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 36px;
+      margin-bottom: 44px;
     }
 
     h1 {
@@ -57,19 +54,16 @@
       font-weight: 500;
       font-size: 1.2rem;
       border-bottom: 1px solid #3f5e7e;
-      padding-bottom: 2px;
     }
 
     .back-link:hover {
       color: #bfd6ff;
     }
 
-    .script-section {
-      background: #0f151e;
-      border-radius: 22px;
-      padding: 28px 30px;
-      margin-bottom: 32px;
-      border: 1px solid #253545;
+    .script-block {
+      margin-bottom: 40px;
+      border-left: 4px solid #2e4b70;
+      padding-left: 24px;
     }
 
     .script-title {
@@ -77,168 +71,126 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #d6e5ff;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      color: #e0ecff;
     }
 
     .script-desc {
       font-size: 1.1rem;
-      color: #a0b8cf;
+      color: #a3b8cf;
       margin-bottom: 28px;
-      border-left: 4px solid #2e4b70;
-      padding-left: 18px;
     }
 
     .button-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 20px;
     }
 
     .btn {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 600;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 14px 34px;
-      border-radius: 50px;
+      letter-spacing: 2px;
+      padding: 12px 32px;
       background: transparent;
-      border: 2px solid #2f4a6e;
-      color: #d3e2fd;
+      border: 2px solid #3a5f82;
+      color: #ffffff;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      transition: 0.1s ease;
-      box-shadow: 0 5px 0 #0b1219;
-      background-color: #1a2533;
+      transition: 0.1s;
     }
 
     .btn:hover {
-      background: #233a55;
-      border-color: #4f7aa8;
-      transform: translateY(-2px);
-      box-shadow: 0 7px 0 #0b1219;
-    }
-
-    .btn:active {
-      transform: translateY(3px);
-      box-shadow: 0 2px 0 #0b1219;
-    }
-
-    .placeholder-note {
-      margin-top: 22px;
-      font-size: 0.9rem;
-      color: #6a7f94;
-      background: #0a0f16;
-      padding: 8px 16px;
-      border-radius: 40px;
-      display: inline-block;
+      background: #1d344b;
+      border-color: #5a8fc9;
     }
 
     .footer-meta {
-      margin-top: 28px;
+      margin-top: 32px;
       text-align: right;
-      color: #5f748b;
+      font-size: 0.8rem;
+      color: #5e748b;
     }
 
     @media (max-width: 600px) {
-      .hub-container { padding: 24px 18px; }
+      .hub-card { padding: 28px 20px; }
       .script-title { font-size: 1.8rem; }
-      .btn { font-size: 1.1rem; padding: 12px 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="hub-container">
+  <div class="hub-card">
     <div class="header-row">
       <h1>TRIPLE7 HUB</h1>
-      <a href="index.html" class="back-link">← BACK TO HOME</a>
+      <a href="index.html" class="back-link">← HOME</a>
     </div>
 
-    <!-- UNIVERSAL SCRIPT SECTION -->
-    <div class="script-section">
+    <!-- UNIVERSAL SCRIPT -->
+    <div class="script-block">
       <div class="script-title">UNIVERSAL SCRIPT</div>
       <div class="script-desc">
-        Stable executor · broad compatibility · frequently updated.
+        Stable executor · broad compatibility · updated regularly.
       </div>
       <div class="button-group">
-        <a href="#" class="btn" id="universal-source-btn">VIEW SOURCE</a>
-        <button class="btn" id="universal-loadstring-btn">COPY LOADSTRING</button>
-      </div>
-      <div class="placeholder-note">
-        🔗 Source placeholder: linksourceplaceholder1<br>
-        📋 Loadstring placeholder: linkloadstringplaceholder1
+        <a href="#" class="btn" id="universal-source">VIEW SOURCE</a>
+        <button class="btn" id="universal-loadstring">COPY LOADSTRING</button>
       </div>
     </div>
 
-    <!-- PROJECT DELTA SECTION -->
-    <div class="script-section">
+    <!-- PROJECT DELTA -->
+    <div class="script-block">
       <div class="script-title">PROJECT DELTA</div>
       <div class="script-desc">
         Experimental features · advanced API · cutting‑edge.
       </div>
       <div class="button-group">
-        <a href="#" class="btn" id="delta-source-btn">VIEW SOURCE</a>
-        <button class="btn" id="delta-loadstring-btn">COPY LOADSTRING</button>
-      </div>
-      <div class="placeholder-note">
-        🔗 Source placeholder: linksourceplaceholder2<br>
-        📋 Loadstring placeholder: linkloadstringplaceholder2
+        <a href="#" class="btn" id="delta-source">VIEW SOURCE</a>
+        <button class="btn" id="delta-loadstring">COPY LOADSTRING</button>
       </div>
     </div>
 
     <div class="footer-meta">
-      triple7 · github pages ready
+      triple7 · github pages
     </div>
   </div>
 
   <script>
     (function() {
-      // Placeholder functionality – replace with actual URLs or loadstrings later.
-      // Currently just demonstrates interactive feedback.
+      // ---------- PLACEHOLDER LINKS ----------
+      // Replace these strings with your actual URLs/loadstrings.
+      const UNIVERSAL_SOURCE_URL = 'linksourceplaceholder1';
+      const UNIVERSAL_LOADSTRING = 'loadstring(game:HttpGet("linkloadstringplaceholder1"))()';
+      const DELTA_SOURCE_URL = 'linksourceplaceholder2';
+      const DELTA_LOADSTRING = 'loadstring(game:HttpGet("linkloadstringplaceholder2"))()';
 
-      // UNIVERSAL SCRIPT
-      const universalSourceBtn = document.getElementById('universal-source-btn');
-      const universalLoadBtn = document.getElementById('universal-loadstring-btn');
-
-      universalSourceBtn.addEventListener('click', (e) => {
+      // Universal
+      document.getElementById('universal-source').addEventListener('click', (e) => {
         e.preventDefault();
-        // Placeholder: open link (replace with actual URL)
-        // window.open('linksourceplaceholder1', '_blank');
-        alert('🔓 [PLACEHOLDER] Universal Script source → linksourceplaceholder1');
+        window.open(UNIVERSAL_SOURCE_URL, '_blank');
       });
-
-      universalLoadBtn.addEventListener('click', () => {
-        // Placeholder copy action
-        const fakeLoadstring = 'loadstring(game:HttpGet("linkloadstringplaceholder1"))()';
-        navigator.clipboard?.writeText(fakeLoadstring).then(() => {
-          alert('📋 Placeholder loadstring copied!\n' + fakeLoadstring);
+      document.getElementById('universal-loadstring').addEventListener('click', () => {
+        navigator.clipboard?.writeText(UNIVERSAL_LOADSTRING).then(() => {
+          alert('Universal loadstring copied.');
         }).catch(() => {
-          prompt('Copy manually (placeholder):', fakeLoadstring);
+          prompt('Copy manually:', UNIVERSAL_LOADSTRING);
         });
       });
 
-      // PROJECT DELTA
-      const deltaSourceBtn = document.getElementById('delta-source-btn');
-      const deltaLoadBtn = document.getElementById('delta-loadstring-btn');
-
-      deltaSourceBtn.addEventListener('click', (e) => {
+      // Delta
+      document.getElementById('delta-source').addEventListener('click', (e) => {
         e.preventDefault();
-        // Replace with actual link
-        // window.open('linksourceplaceholder2', '_blank');
-        alert('🔓 [PLACEHOLDER] Project Delta source → linksourceplaceholder2');
+        window.open(DELTA_SOURCE_URL, '_blank');
       });
-
-      deltaLoadBtn.addEventListener('click', () => {
-        const fakeDeltaLoadstring = 'loadstring(game:HttpGet("linkloadstringplaceholder2"))()';
-        navigator.clipboard?.writeText(fakeDeltaLoadstring).then(() => {
-          alert('📋 Placeholder Delta loadstring copied!\n' + fakeDeltaLoadstring);
+      document.getElementById('delta-loadstring').addEventListener('click', () => {
+        navigator.clipboard?.writeText(DELTA_LOADSTRING).then(() => {
+          alert('Delta loadstring copied.');
         }).catch(() => {
-          prompt('Copy manually (placeholder):', fakeDeltaLoadstring);
+          prompt('Copy manually:', DELTA_LOADSTRING);
         });
       });
-
     })();
   </script>
 </body>
